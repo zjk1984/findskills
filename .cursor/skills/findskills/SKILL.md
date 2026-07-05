@@ -77,3 +77,28 @@ node src/index.js <command> [args]
 - Default command is `search` when only a query is provided
 - Results may include install commands such as `clawhub install <slug>`
 - If a source is unavailable, run `sources` and explain which backends failed
+
+## MCP Tools (Preferred in Cursor)
+
+This project also exposes MCP tools via `.cursor/mcp.json`. After opening the repo in Cursor, enable the `findskills` server under **Customize → Tools & MCP**.
+
+Available tools:
+
+| Tool | Purpose |
+| --- | --- |
+| `search_skills` | Search skills by keyword |
+| `get_skill_info` | Get skill details |
+| `get_related_skills` | Find related skills |
+| `recommend_skills` | Recommend by interests |
+| `get_popular_skills` | List popular skills |
+| `check_skill_sources` | Check source availability |
+
+Prefer MCP tools in Cursor Agent chat when they are enabled. Fall back to the CLI wrapper when MCP is unavailable.
+
+Manual MCP startup for debugging:
+
+```bash
+npm run mcp
+```
+
+MCP logs: Output panel → **MCP Logs**.
